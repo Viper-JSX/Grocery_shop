@@ -1,0 +1,217 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: rgba(20, 0, 200, 0.4);
+	overflow-y: hidden;
+	display: flex;
+	justify-content: center;
+}
+
+#productToCartAnimation{
+	width: 100px;
+	height: 200px;
+	background: rgb(50, 50, 50);
+	border: 2px solid black;
+	text-align: center;
+	position: absolute;
+	transition: 1s all;
+	overflow: hidden;
+}
+
+#productToCartAnimation img{
+	width: 70%;
+}
+
+#shopWindow{
+	width: 40vw;
+	height: 30vw;
+	min-width: 320px;
+	background: rgb(100, 100, 100);
+	margin-top: 50vh;
+	transform: translateY(-50%);
+	border: 3px solid black;
+	overflow: hidden;
+}
+
+#addGroceryWindow{
+	width: 100%;
+	height: 100%;
+	color: white;
+	background: #222222;
+	text-align: center;
+	overflow: auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+}
+
+#closeAddGroceryWindowButton{
+	width: 2em;
+	height: 2em;
+	top: 0;
+	right: 0;
+	position: absolute;
+}
+
+#groceryImageInput{
+	display: none;
+}
+
+#groceryImageLabel{
+	text-decoration: underline;
+}
+
+#groceryImagePreview{
+	width: 100%;
+}
+
+#groceryImagePreviewContainer{
+	width: 25%;
+	border: 2px solid black; 
+}
+
+#groceryImageLabel:hover{
+	color: red;
+}
+
+#groceryToShopButton{
+	bottom: 0;
+	right: 0;
+	position: absolute;
+}
+
+#shopMenu{
+	width: 100%;
+	height: 15%;
+	background: rgb(50, 50, 50);
+	border-bottom: 3px solid black;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#windowMode{
+	width: 100%;
+	height: 5%;
+	color: white;
+	display: flex;
+}
+
+#windowMode > div{
+	width: 15%;
+	height: 100%;
+	border-top-right-radius: 7px;
+}
+
+#showShop{
+	background: rgb(50, 50, 50);
+}
+
+#showCart{
+	background: rgb(70, 70, 70);
+	border: 1px solid black;
+	border-top: none;
+}
+
+#optionSearch{
+	color: white;
+	font-weight: 600;
+	background: #222222;
+}
+
+#showAddGroceryWindowButton{
+	font-weight: 600;
+	background: linear-gradient(orange, yellow);
+}
+
+#cardContainer{
+	width: 100%;
+	height: 80%;
+	color: white;
+	background: linear-gradient(black, gray);
+	overflow: auto;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+#cardContainer > div, #cart > div{
+	width: 33.3%;
+	min-width: 150px;
+	min-height: 200px;
+	max-height: 60%;
+	background: rgb(50, 50, 50);
+	border: 2px solid black;
+	word-break: break-all;
+	word-wrap: wrap;
+	text-align: center;
+	overflow: auto;
+	transition: 1s;
+}
+
+#increaseQuantity, #decreaseQuantiti{
+	width: 1.2em;
+	height: 1.5em;
+}
+
+#cardContainer #addToCartButton{
+	color: white;
+	background: linear-gradient(black, gray);
+}
+
+#quantityControll, #addToCartButton, #totalPrice{
+	margin-top: 0.5em;
+}
+
+#cardContainer > div > img, #cart > div > img{
+	width: 30%;
+}
+
+#quantityControll{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+#quantityControll > input{
+	width: 30px;
+	text-align: center;
+}
+
+#cart{
+	width: 100%;
+	height: 70%;
+	color: white;
+	background: linear-gradient(black, gray);
+	display: none;
+	flex-wrap: wrap;
+	overflow: auto;
+	transform: rotate(0deg);
+	transition: 1s;
+}
+
+#productToCartDeleteButton{
+	display: block;
+	margin-left: 100%;
+	transform: translateX(-100%);
+}
+
+#totalPriceWindow{
+	width: 100%;
+	height: 10%;
+	color: white;
+	background: #222222;
+	bottom: 0;
+	right: 0;
+	text-align: right;
+	padding-right: 8%;
+}
+
+#totalPriceWindow > #cartTotalPrice, #cartTotalPriceCurrency{
+	color: green;
+	font-weight: 600;
+}

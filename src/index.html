@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"></head>
+		<meta name="viewport" content="width=device-width initial-scale=1">
+		<link rel="stylesheet" href="style.css">
+		<script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
+	</head>
+	<body>
+		
+		<div id="shopWindow">
+			<div id="addGroceryWindow">
+				<button id="closeAddGroceryWindowButton">X</button>
+				<div>
+					<input id="groceryImageInput" type="file">
+					<label id="groceryImageLabel" for="groceryImageInput">Add image</label>
+				</div>
+				<div id="groceryImagePreviewContainer">
+						<img id="groceryImagePreview" src="" alt="Image Preview">
+					</div>
+				<div><input id="addGroceryTitleInput" type="text" placeholder="Name of grocery"></div>
+				<div><input id="addGroceryPriceInput" type="text" placeholder="Price per one(&euro;)"></div>
+				<select id="addGroceryCategoryInput">
+					<option value="" disabled selected>Choose type</option>
+					<option value="fruit">Fruit</option>
+					<option value="vegetable">Vegetable</option>
+				</select>
+				<div>
+					<textarea id="addGroceryDescritpionInput" name="addGroceryDescritpion" 	cols="30" rows="10" placeholder="Enter some description"></textarea>
+				</div>
+				<button id="addGroceryToShopButton">Add gorcery</button>
+			</div>
+
+			<div id="windowMode">
+				<div id="showShop">Shop</div>
+				<div id="showCart">Cart</div>
+			</div>
+			<div id="shopMenu">
+				<div>
+					<input id="searchInput" placeholder="&#x1F50E;" type="text">
+				</div>
+				<div>
+					<select name="optionSearch" id="optionSearch">
+						<option value="allProducts">All products</option>
+						<option value="vegetables">Vegetable</option>
+						<option value="fruit">Fruits</option>
+					</select>
+				</div>
+				<div>
+					<button id="showAddGroceryWindowButton">Add grocery</button>
+				</div>
+			</div>
+
+			<div id="cardContainer" visible="true"></div>
+			<div id="cart" visible="false"></div>
+		
+			<div id="totalPriceWindow">
+					<span>Total: </span>
+					<span id="cartTotalPrice">0</span>
+					<span id="cartTotalPriceCurrency">&euro;</span>
+			</div>
+		</div>
+
+	</body>
+</html>
